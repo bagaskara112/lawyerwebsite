@@ -23,8 +23,7 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-1">
           {[
             ["Beranda", "/"],
-            ["Layanan", "/services"],
-            ["Tentang", "/about"]
+            ["Layanan", "/services"]
           ].map(([label, href]) => (
             <Link key={href as string} href={href as string} className="btn-ghost">
               {label}

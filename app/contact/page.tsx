@@ -36,7 +36,7 @@ export default function ContactPage() {
         <div className="card p-6">
           <h3 className="text-xl font-semibold">Kantor</h3>
           <p className="mt-2 text-slate-700">Jl. Sawunggaling No. 7A</p>
-          <p className="text-slate-700">Email: email@domain.com</p>
+          <p className="text-slate-700">Email: ibnufajarmaulana19@gmail.com</p>
           <p className="text-slate-700">Telepon: 0856-4912-4046</p>
           <div className="mt-6">
             <iframe
