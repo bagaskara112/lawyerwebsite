@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck, Gavel, FileText } from "lucide-react";
+import { Button } from "./ui/button";
+import { MessageCircle } from "lucide-react"; // ikon WhatsApp
 
 export default function Hero() {
   return (
@@ -19,9 +21,24 @@ export default function Hero() {
             Pendampingan hukum menyeluruh mencakup perkara <b>Perdata, Pidana,</b> hingga <b>Non-Litigasi</b>.
           </motion.p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/contact" className="btn-primary"><ShieldCheck className="w-4 h-4"/> Konsultasi Gratis</Link>
-            <Link href="/services" className="btn-ghost"><Gavel className="w-4 h-4"/> Lihat Layanan</Link>
+            {/* Tombol WhatsApp */}
+            <a
+              href="https://wa.me/6285649124046?text=Halo%20saya%20ingin%20konsultasi%20hukum"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary flex items-center gap-2"
+            >
+              <ShieldCheck className="w-4 h-4" />
+              Konsultasi Gratis
+            </a>
+
+            {/* Tombol Layanan */}
+            <Link href="/services" className="btn-ghost flex items-center gap-2">
+              <Gavel className="w-4 h-4" />
+              Lihat Layanan
+            </Link>
           </div>
+
           <div className="mt-10 grid grid-cols-3 gap-4">
             {[
               ["100%", "Konsultasi Gratis"],
@@ -37,7 +54,7 @@ export default function Hero() {
         </div>
         <motion.div initial={{ scale: 0.96, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.6 }} className="card p-6">
           <div className="flex items-center gap-3">
-            <FileText className="w-5 h-5 text-brand-600"/>
+            <FileText className="w-5 h-5 text-brand-600" />
             <h3 className="text-xl font-semibold">Spesialisasi</h3>
           </div>
           <ul className="mt-4 grid sm:grid-cols-2 gap-3 text-slate-700">

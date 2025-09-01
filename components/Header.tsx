@@ -34,11 +34,14 @@ export default function Header() {
         <motion.a
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.98 }}
-          href="/contact"
+          href="https://wa.me/6285649124046?text=Halo%20saya%20ingin%20konsultasi%20hukum"
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn-primary"
         >
           <Phone className="w-4 h-4" /> Konsultasi
         </motion.a>
+
       </div>
     </header>
   );
