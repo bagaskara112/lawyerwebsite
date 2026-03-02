@@ -20,7 +20,7 @@ export default function ServiceCard() {
       icon: Landmark,
       title: "Non-Litigasi",
       desc: "Penyelesaian masalah hukum di luar pengadilan secara damai dan strategis.",
-      list: ["Jual Beli & Sertifikat Tanah", "Sengketa Tanah & Properti", "Penyusunan Kontrak Berikat", "Negosiasi Bisnis"],
+      list: ["Jual Beli & Sertifikat Tanah", "Sengketa Tanah & Properti"],
     },
   ];
 
