@@ -1,8 +1,8 @@
-name: "🔔 Discord Notifications"
+name: '🔔 Discord Notifications'
 
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
   deployment_status:
 
 concurrency:
@@ -11,13 +11,13 @@ concurrency:
 
 jobs:
   notify:
-    name: "📨 Send Notification"
+    name: '📨 Send Notification'
     runs-on: ubuntu-latest
     if: github.actor != 'dependabot[bot]'
     timeout-minutes: 2
 
     steps:
-      - name: "🔔 Discord Notification"
+      - name: '🔔 Discord Notification'
         uses: actions/github-script@v7
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
@@ -53,6 +53,8 @@ jobs:
 
             const branchName = (ref) => ref ? ref.replace("refs/heads/", "").replace("refs/tags/", "") : "unknown";
             const ownerAvatar = context.payload.repository?.owner?.avatar_url || "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png";
+            const BOT_NAME = "TechPoint Notifier";
+            const BOT_AVATAR = "https://awpbjuuervegpfdunuui.supabase.co/storage/v1/object/public/images/produk/BRANDING.png";
 
             // --- Event Logic ---
             if (context.eventName === 'deployment_status') {
@@ -66,11 +68,6 @@ jobs:
 
               const embed = {
                 color: Colors.success,
-                author: {
-                  name: `ScoutLeads`,
-                  url: repoUrl,
-                  icon_url: ownerAvatar
-                },
                 title: `🌐 Deploy Berhasil`,
                 url: status.target_url,
                 description: [
@@ -99,8 +96,8 @@ jobs:
 
               // Send
               const payload = {
-                username: "ScoutLeads Bot",
-                avatar_url: ownerAvatar,
+                username: BOT_NAME,
+                avatar_url: BOT_AVATAR,
                 content: "## 🎉 Deployment Baru!",
                 embeds: [embed]
               };
@@ -117,15 +114,7 @@ jobs:
               const isMulti = totalCommits > 1;
               const isForced = context.payload.forced;
 
-              // File change stats
-              const allAdded = new Set();
-              const allModified = new Set();
-              const allRemoved = new Set();
-              commits.forEach(c => {
-                (c.added || []).forEach(f => allAdded.add(f));
-                (c.modified || []).forEach(f => allModified.add(f));
-                (c.removed || []).forEach(f => allRemoved.add(f));
-              });
+
 
               // Commit list with better formatting
               const commitList = commits.slice(0, 6).map(c => {
@@ -137,11 +126,6 @@ jobs:
 
               const embed = {
                 color: isForced ? Colors.warning : Colors.info,
-                author: {
-                  name: `ScoutLeads`,
-                  url: repoUrl,
-                  icon_url: ownerAvatar
-                },
                 title: `${isForced ? "⚠️ Force Push" : "🚀 Push Baru"} ke \`${branch}\``,
                 url: isMulti ? context.payload.compare : headCommit.url,
                 thumbnail: { url: sender?.avatar_url },
@@ -159,15 +143,6 @@ jobs:
                 ].join("\n"),
                 fields: [
                   {
-                    name: "📊 File Changes",
-                    value: [
-                      `\`+${allAdded.size}\` added`,
-                      `\`~${allModified.size}\` modified`,
-                      `\`-${allRemoved.size}\` removed`,
-                    ].join("  •  "),
-                    inline: false
-                  },
-                  {
                     name: "🔗 Quick Links",
                     value: `[View Diff](${context.payload.compare}) • [Branch](${repoUrl}/tree/${branch}) • [Repo](${repoUrl})`,
                     inline: false
@@ -181,8 +156,8 @@ jobs:
               };
 
               const payload = {
-                username: "ScoutLeads Bot",
-                avatar_url: ownerAvatar,
+                username: BOT_NAME,
+                avatar_url: BOT_AVATAR,
                 embeds: [embed]
               };
 
