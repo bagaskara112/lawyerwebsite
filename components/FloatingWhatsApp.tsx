@@ -29,7 +29,7 @@ export default function FloatingWhatsApp({
     phoneNumber = "6285649124046",
     message = "Halo, saya membutuhkan konsultasi hukum segera.",
     visibilityThreshold = 300,
-}: FloatingWhatsAppProps): JSX.Element {
+}: FloatingWhatsAppProps) {
     const [isVisible, setIsVisible] = useState<boolean>(false);
 
     useEffect(() => {

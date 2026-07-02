@@ -10,32 +10,32 @@ const config: Config = {
         serif: ['var(--font-playfair)', 'serif'],
       },
   		colors: {
-        // Modern Sapphire/Royal Blue (Cleaner, more trustworthy)
+        // Deep Charcoal for authoritative, premium feel
   			brand: {
-  				'50': '#eff6ff',
-  				'100': '#dbeafe',
-  				'200': '#bfdbfe',
-  				'300': '#93c5fd',
-  				'400': '#60a5fa',
-  				'500': '#3b82f6',
-  				'600': '#2563eb', // Primary
-  				'700': '#1d4ed8', // Darker interaction
-  				'800': '#1e40af',
-  				'900': '#1e3a8a', // Deep background
-          '950': '#172554', // Darkest
+  				'50': '#f6f6f7',
+  				'100': '#e3e4e6',
+  				'200': '#c6c9cc',
+  				'300': '#a0a5ab',
+  				'400': '#747b84',
+  				'500': '#565e68',
+  				'600': '#434952', // Primary
+  				'700': '#373c42', // Darker interaction
+  				'800': '#2f3338',
+  				'900': '#292c30', // Deep background
+          '950': '#1b1d1f', // Darkest
   			},
-        // Elegant Slate/Silver for accents (replaces Gold)
+        // Soft Champagne Gold for sophisticated accents
         silver: {
-          '50': '#f8fafc',
-          '100': '#f1f5f9',
-          '200': '#e2e8f0',
-          '300': '#cbd5e1',
-          '400': '#94a3b8',
-          '500': '#64748b', // Primary Accent
-          '600': '#475569',
-          '700': '#334155',
-          '800': '#1e293b',
-          '900': '#0f172a',
+          '50': '#fbfaf8',
+          '100': '#f5f2ed',
+          '200': '#ebe1d3',
+          '300': '#decfb5',
+          '400': '#d0b891',
+          '500': '#c4a372', // Primary Accent
+          '600': '#b78c57',
+          '700': '#997145',
+          '800': '#7e5d3c',
+          '900': '#654b32',
         },
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
