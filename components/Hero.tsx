@@ -6,24 +6,16 @@ import { Scale, Phone, ArrowRight, CheckCircle2, ShieldCheck, Award } from "luci
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100dvh] flex flex-col justify-center pt-24 pb-12 md:py-16 overflow-hidden bg-brand-950">
+    <section className="relative min-h-[100dvh] flex flex-col justify-center pt-24 pb-12 md:py-16 overflow-hidden bg-gradient-to-b from-brand-50/60 via-white to-white">
       {/* Dynamic Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-brand-950"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-50/40 via-white to-white"></div>
         {/* Subtle grid pattern */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
-        {/* Glowing Orbs */}
-        <motion.div 
-          animate={{ x: [0, 50, 0], y: [0, -50, 0], opacity: [0.1, 0.2, 0.1] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-600 rounded-full blur-[120px]"
-        />
-        <motion.div 
-          animate={{ x: [0, -50, 0], y: [0, 50, 0], opacity: [0.05, 0.15, 0.05] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-silver-500 rounded-full blur-[150px]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-950/50 to-brand-950"></div>
+        <div className="absolute inset-0 opacity-40" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(2, 106, 210, 0.12) 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
+        {/* Ambient Orbs - Light sapphire & soft pearl glows */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-200/50 rounded-full blur-[120px] animate-orb-1 pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-brand-100/60 rounded-full blur-[150px] animate-orb-2 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white"></div>
       </div>
 
       <div className="container-xl relative z-10 grid lg:grid-cols-2 gap-12 items-center px-4 sm:px-6">
@@ -34,9 +26,9 @@ export default function Hero() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-900/40 backdrop-blur-md border border-brand-800/50 text-silver-300 text-xs md:text-sm font-medium mb-8 shadow-inner shadow-white/5"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 backdrop-blur-md border border-brand-200 text-brand-800 text-xs md:text-sm font-semibold mb-8 shadow-sm"
           >
-            <Award className="w-4 h-4 text-silver-400" />
+            <Award className="w-4 h-4 text-brand-600" />
             <span className="tracking-wide">Firma Hukum Terpercaya</span>
           </motion.div>
 
@@ -44,21 +36,21 @@ export default function Hero() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-            className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-7xl mb-6 leading-[1.1] font-serif"
+            className="text-brand-950 text-5xl sm:text-6xl md:text-7xl lg:text-7xl mb-6 leading-[1.1] font-serif"
           >
             Keadilan Anda <br className="hidden sm:block" />
-            <span className="text-silver-500 inline-block mt-2 font-style: italic">Prioritas Kami.</span>
+            <span className="text-brand-600 inline-block mt-2 font-style: italic">Prioritas Kami.</span>
           </motion.h1>
 
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.7, ease: "easeOut" }}
-            className="text-base md:text-xl text-brand-200 mb-10 max-w-xl font-light leading-relaxed opacity-90"
+            className="text-base md:text-xl text-silver-600 mb-10 max-w-xl font-normal leading-relaxed"
           >
             Pendampingan hukum profesional dan strategis untuk menyelesaikan perkara
-            <strong className="text-white font-medium"> Perdata, Pidana,</strong> dan
-            <strong className="text-white font-medium"> Non-Litigasi</strong> Anda dengan tuntas dan berintegritas.
+            <strong className="text-brand-950 font-semibold"> Perdata, Pidana,</strong> dan
+            <strong className="text-brand-950 font-semibold"> Non-Litigasi</strong> Anda dengan tuntas dan berintegritas.
           </motion.p>
 
           <motion.div
@@ -71,15 +63,15 @@ export default function Hero() {
               href="https://wa.me/6285649124046?text=Halo%20saya%20ingin%20konsultasi%20hukum"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative overflow-hidden inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 font-medium text-brand-950 bg-silver-400 hover:bg-silver-300 transition-all duration-300 hover:shadow-[0_0_2rem_-0.5rem_#d0b891] w-full sm:w-auto"
+              className="group relative overflow-hidden inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 font-semibold text-white bg-brand-600 hover:bg-brand-700 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(2,106,210,0.35)] w-full sm:w-auto"
             >
               <Phone className="w-5 h-5 transition-transform group-hover:scale-110" />
               <span>Konsultasi Gratis</span>
             </a>
 
-            <Link href="/services" className="group inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 font-medium text-white bg-brand-800/50 backdrop-blur border border-brand-700/50 hover:bg-brand-800 hover:border-brand-600 transition-all duration-300 w-full sm:w-auto">
+            <Link href="/services" className="group inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 font-semibold text-brand-900 bg-white border border-brand-200 hover:bg-brand-50 hover:border-brand-300 shadow-sm transition-all duration-300 w-full sm:w-auto">
               <span>Pelajari Layanan</span> 
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-silver-400" />
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-brand-600" />
             </Link>
           </motion.div>
 
@@ -88,11 +80,11 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.7 }}
-            className="mt-8 flex items-center gap-4 text-xs text-brand-400 font-medium sm:hidden"
+            className="mt-8 flex items-center gap-4 text-xs text-silver-600 font-medium sm:hidden"
           >
-            <div className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-silver-500" /> Resmi PERADI</div>
-            <div className="w-1 h-1 rounded-full bg-brand-800"></div>
-            <div className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-silver-500" /> Rahasia 100%</div>
+            <div className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-brand-600" /> Resmi PERADI</div>
+            <div className="w-1 h-1 rounded-full bg-brand-200"></div>
+            <div className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-brand-600" /> Rahasia 100%</div>
           </motion.div>
         </div>
 
@@ -103,21 +95,21 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="absolute top-20 right-10 w-[22rem] bg-brand-900/30 backdrop-blur-xl border border-brand-800/50 p-8 rounded-2xl shadow-2xl"
+            className="absolute top-20 right-10 w-[22rem] bg-white/95 backdrop-blur-xl border border-brand-100 p-8 rounded-2xl shadow-elevated"
           >
-            <div className="flex items-center gap-3 mb-6 pb-6 border-b border-brand-800/50">
-              <div className="w-12 h-12 rounded-full bg-brand-800 flex items-center justify-center">
-                <Scale className="w-6 h-6 text-silver-400" />
+            <div className="flex items-center gap-3 mb-6 pb-6 border-b border-brand-100">
+              <div className="w-12 h-12 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-600">
+                <Scale className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-white font-serif text-lg">Area Spesialisasi</h3>
-                <p className="text-brand-300 text-xs">Penanganan Perkara Utama</p>
+                <h3 className="text-brand-950 font-serif text-lg font-bold">Area Spesialisasi</h3>
+                <p className="text-silver-500 text-xs font-medium">Penanganan Perkara Utama</p>
               </div>
             </div>
-            <ul className="space-y-5">
+            <ul className="space-y-4">
               {['Hukum Keluarga & Waris', 'Sengketa Tanah & Properti', 'Kasus Pidana Umum', 'Penyusunan Kontrak Bisnis'].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-brand-50 group">
-                  <div className="w-2 h-2 rounded-full bg-silver-500 group-hover:scale-150 group-hover:bg-silver-400 transition-all duration-300 shrink-0" />
+                <li key={i} className="flex items-center gap-3 text-brand-900 group">
+                  <div className="w-2 h-2 rounded-full bg-brand-600 group-hover:scale-150 transition-all duration-300 shrink-0" />
                   <span className="text-sm font-medium tracking-wide">{item}</span>
                 </li>
               ))}
@@ -129,16 +121,16 @@ export default function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            className="absolute bottom-24 left-0 bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-2xl shadow-elevated flex gap-8 items-center"
+            className="absolute bottom-24 left-0 bg-white/95 backdrop-blur-xl border border-brand-100 p-6 rounded-2xl shadow-elevated flex gap-8 items-center"
           >
             <div>
-              <div className="text-3xl font-bold text-white font-serif">100%</div>
-              <div className="text-[10px] text-silver-400 font-medium uppercase tracking-widest mt-1">Kerahasiaan</div>
+              <div className="text-3xl font-bold text-brand-950 font-serif">100%</div>
+              <div className="text-[10px] text-brand-600 font-bold uppercase tracking-widest mt-1">Kerahasiaan</div>
             </div>
-            <div className="h-12 w-px bg-brand-800"></div>
+            <div className="h-12 w-px bg-brand-100"></div>
             <div>
-              <div className="text-3xl font-bold text-white font-serif">24/7</div>
-              <div className="text-[10px] text-silver-400 font-medium uppercase tracking-widest mt-1">Respons Cepat</div>
+              <div className="text-3xl font-bold text-brand-950 font-serif">24/7</div>
+              <div className="text-[10px] text-brand-600 font-bold uppercase tracking-widest mt-1">Respons Cepat</div>
             </div>
           </motion.div>
         </div>

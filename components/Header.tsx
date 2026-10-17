@@ -10,7 +10,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navLinks = [
     { label: "Beranda", href: "/" },
-    { label: "Profil", href: "#profile" },
+    { label: "Profil", href: "/#profile" },
     { label: "Layanan", href: "/services" },
   ];
 
@@ -25,6 +25,7 @@ export default function Header() {
               src="/logo.png"
               alt="Logo Ibnu Fajar Maulana"
               fill
+              priority
               sizes="(max-width: 768px) 48px, 56px"
               className="object-contain p-1"
             />
@@ -70,6 +71,7 @@ export default function Header() {
         <button
           className="md:hidden p-2 text-brand-900 transition-colors duration-300 hover:bg-brand-50 rounded-lg"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Tutup menu" : "Buka menu"}
         >
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>

@@ -50,8 +50,8 @@ export default function FAQ() {
                     <div className="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center mx-auto mb-4 text-brand-600">
                         <HelpCircle className="w-6 h-6" />
                     </div>
-                    <h2 className="text-brand-900 mb-4 text-3xl md:text-4xl">Pertanyaan Umum</h2>
-                    <p className="text-brand-600 text-sm md:text-base">
+                    <h2 className="text-brand-950 mb-4 text-3xl md:text-4xl">Pertanyaan Umum</h2>
+                    <p className="text-silver-600 text-sm md:text-base">
                         Jawaban untuk beberapa keraguan yang mungkin Anda miliki sebelum memulai konsultasi resmi.
                     </p>
                 </motion.div>
@@ -68,7 +68,7 @@ export default function FAQ() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                                className={`bg-white rounded-2xl border transition-colors duration-300 overflow-hidden ${isOpen ? "border-brand-300 shadow-soft" : "border-silver-200 hover:border-brand-200"
+                                className={`bg-white rounded-2xl border transition-colors duration-300 overflow-hidden ${isOpen ? "border-brand-300 shadow-soft" : "border-brand-100 hover:border-brand-200"
                                     }`}
                             >
                                 <button
@@ -76,7 +76,7 @@ export default function FAQ() {
                                     className="w-full text-left px-5 py-4 sm:px-6 sm:py-5 flex items-center justify-between gap-4 outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-2xl"
                                     aria-expanded={isOpen}
                                 >
-                                    <span className={`font-serif text-base sm:text-lg transition-colors ${isOpen ? "text-brand-700 font-bold" : "text-brand-900 font-medium"}`}>
+                                    <span className={`font-serif text-base sm:text-lg transition-colors ${isOpen ? "text-brand-600 font-bold" : "text-brand-950 font-medium"}`}>
                                         {faq.question}
                                     </span>
                                     <div className={`w-8 h-8 rounded-full bg-brand-50 flex items-center justify-center shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180 bg-brand-600 text-white" : "text-brand-600"}`}>
@@ -92,7 +92,7 @@ export default function FAQ() {
                                             exit={{ height: 0, opacity: 0 }}
                                             transition={{ duration: 0.3, ease: "easeInOut" }}
                                         >
-                                            <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-sm sm:text-base text-silver-600 leading-relaxed border-t border-silver-100 pt-4 mt-2">
+                                            <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-sm sm:text-base text-silver-600 leading-relaxed border-t border-brand-100 pt-4 mt-2">
                                                 {faq.answer}
                                             </div>
                                         </motion.div>

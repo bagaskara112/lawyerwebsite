@@ -44,7 +44,7 @@ export default function AboutProfile() {
                     <div className="w-20 h-1 bg-brand-600 mx-auto mb-8 rounded-full"></div>
 
                     <p className="text-sm md:text-lg text-silver-600 leading-relaxed max-w-2xl mx-auto">
-                        Sebagai advokat profesional, dedikasi saya adalah memberikan penyelesaian hukum yang <strong className="text-brand-700 font-semibold">objektif, transparan, dan solutif</strong>. Menjunjung tinggi etika profesi untuk melindungi hak serta masa depan Anda secara maksimal.
+                        Sebagai advokat profesional, dedikasi saya adalah memberikan penyelesaian hukum yang <strong className="text-brand-900 font-semibold">objektif, transparan, dan solutif</strong>. Menjunjung tinggi etika profesi untuk melindungi hak serta masa depan Anda secara maksimal.
                     </p>
 
                     <div className="mt-10">

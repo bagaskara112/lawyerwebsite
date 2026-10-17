@@ -4,25 +4,27 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-950 text-brand-200 mt-20">
+    <footer className="mt-20">
 
       {/* Pre-Footer CTA */}
-      <div className="border-b border-brand-800">
+      <div className="bg-brand-50/60 border-t border-b border-brand-100 text-brand-950">
         <div className="container-xl px-4 sm:px-6 py-12 md:py-16 text-center">
-          <h2 className="text-white mb-4 md:mb-6 text-3xl md:text-4xl">Butuh Bantuan Hukum Segera?</h2>
-          <p className="max-w-xl mx-auto mb-6 md:mb-8 text-brand-300 text-sm md:text-base">
+          <h2 className="text-brand-950 mb-4 md:mb-6 text-3xl md:text-4xl font-serif">Butuh Bantuan Hukum Segera?</h2>
+          <p className="max-w-xl mx-auto mb-6 md:mb-8 text-silver-600 text-sm md:text-base leading-relaxed">
             Jangan tunda masalah hukum Anda. Kami siap mendengarkan, menganalisis, dan memberikan solusi terbaik untuk melindungi hak Anda.
           </p>
           <a
             href="https://wa.me/6285649124046?text=Halo%20saya%20ingin%20konsultasi%20darurat"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary inline-flex items-center gap-2"
+            className="btn-primary inline-flex items-center gap-2"
           >
             <Phone className="w-5 h-5" /> Hubungi Kami Sekarang <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </div>
+
+      <div className="bg-brand-950 text-silver-300">
 
       {/* Main Footer Content */}
       <div className="container-xl px-4 sm:px-6 py-12 md:py-16 grid md:grid-cols-2 lg:grid-cols-12 gap-10 md:gap-12">
@@ -95,6 +97,7 @@ export default function Footer() {
             <Link href="/" className="hover:text-brand-300 transition-colors">Syarat & Ketentuan</Link>
           </div>
         </div>
+      </div>
       </div>
     </footer>
   );

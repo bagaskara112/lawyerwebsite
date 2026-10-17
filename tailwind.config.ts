@@ -10,32 +10,32 @@ const config: Config = {
         serif: ['var(--font-playfair)', 'serif'],
       },
   		colors: {
-        // Deep Charcoal for authoritative, premium feel
+        // Royal Sapphire palette (Vibrant, authoritative, fresh & modern)
   			brand: {
-  				'50': '#f6f6f7',
-  				'100': '#e3e4e6',
-  				'200': '#c6c9cc',
-  				'300': '#a0a5ab',
-  				'400': '#747b84',
-  				'500': '#565e68',
-  				'600': '#434952', // Primary
-  				'700': '#373c42', // Darker interaction
-  				'800': '#2f3338',
-  				'900': '#292c30', // Deep background
-          '950': '#1b1d1f', // Darkest
+  				'50': '#f0f6ff',  // Soft pearl blue tint
+  				'100': '#e0edfe', // Ice blue surface & card border
+  				'200': '#bae0fd', // Light sapphire border
+  				'300': '#7cc5fb', // Sky highlight
+  				'400': '#38a7f7', // Vivid sapphire
+  				'500': '#0f8bf0', // Primary sapphire
+  				'600': '#026ad2', // Royal Sapphire (Main Brand Color)
+  				'700': '#0254aa', // Darker interactive sapphire
+  				'800': '#07478a', // Deep royal sapphire
+  				'900': '#0c3b6f', // Deep navy text
+          '950': '#072144', // Darkest sapphire slate
   			},
-        // Soft Champagne Gold for sophisticated accents
+        // Crisp Pearl & Platinum Slate (Neutral luxury counterpoint)
         silver: {
-          '50': '#fbfaf8',
-          '100': '#f5f2ed',
-          '200': '#ebe1d3',
-          '300': '#decfb5',
-          '400': '#d0b891',
-          '500': '#c4a372', // Primary Accent
-          '600': '#b78c57',
-          '700': '#997145',
-          '800': '#7e5d3c',
-          '900': '#654b32',
+          '50': '#f8fafc',  // Ultra-clean pearl white
+          '100': '#f1f5f9', // Soft pearl surface
+          '200': '#e2e8f0', // Crisp subtle border
+          '300': '#cbd5e1', // Slate divider
+          '400': '#94a3b8', // Slate muted
+          '500': '#64748b', // Platinum slate accent
+          '600': '#475569', // Body text slate
+          '700': '#334155', // High-contrast text
+          '800': '#1e293b', // Deep charcoal slate
+          '900': '#0f172a', // Jet slate
         },
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

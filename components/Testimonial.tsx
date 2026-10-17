@@ -32,9 +32,9 @@ export default function Testimonial() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-12 md:mb-16"
         >
-          <span className="text-silver-500 font-semibold tracking-wider uppercase text-xs md:text-sm mb-3 block">Testimoni Klien</span>
-          <h2 className="text-brand-900 mb-4 text-3xl md:text-4xl">Kepercayaan Mereka, Kebanggaan Kami</h2>
-          <p className="text-brand-600 text-sm md:text-base">
+          <span className="text-brand-600 font-semibold tracking-wider uppercase text-xs md:text-sm mb-3 block">Testimoni Klien</span>
+          <h2 className="text-brand-950 mb-4 text-3xl md:text-4xl">Kepercayaan Mereka, Kebanggaan Kami</h2>
+          <p className="text-silver-600 text-sm md:text-base">
             Bukti nyata dari komitmen kami dalam memberikan layanan hukum terbaik untuk setiap klien yang kami tangani.
           </p>
         </motion.div>
@@ -49,20 +49,20 @@ export default function Testimonial() {
               transition={{ delay: i * 0.1, duration: 0.6 }}
               className="bg-white p-8 rounded-2xl shadow-soft border border-brand-100 relative group hover:-translate-y-1 transition-transform duration-300"
             >
-              <Quote className="absolute top-6 right-6 w-12 h-12 text-brand-50 transition-colors duration-300 group-hover:text-silver-100" />
+              <Quote className="absolute top-6 right-6 w-12 h-12 text-brand-50 transition-colors duration-300 group-hover:text-brand-100/60" />
 
               <div className="flex gap-1 mb-6">
                 {[...Array(5)].map((_, idx) => (
-                  <Star key={idx} className="w-4 h-4 fill-brand-400 text-brand-400" />
+                  <Star key={idx} className="w-4 h-4 fill-amber-400 text-amber-400" />
                 ))}
               </div>
 
-              <p className="text-brand-700 italic mb-8 relative z-10 text-sm md:text-base">
+              <p className="text-silver-700 italic mb-8 relative z-10 text-sm md:text-base leading-relaxed">
                 "{it.q}"
               </p>
 
               <div className="mt-auto border-t border-brand-50 pt-4">
-                <div className="font-serif font-bold text-brand-900">{it.client}</div>
+                <div className="font-serif font-bold text-brand-950">{it.client}</div>
                 <div className="text-xs text-brand-500">{it.type}</div>
               </div>
             </motion.div>
